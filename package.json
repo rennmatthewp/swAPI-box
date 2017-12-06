@@ -22,6 +22,7 @@
     "eslint": "^4.12.1",
     "node-sass-chokidar": "0.0.3",
     "prop-types": "^15.6.0",
+    "react-star-wars-crawl": "^1.0.1",
     "react-test-renderer": "^16.2.0"
   }
 }
