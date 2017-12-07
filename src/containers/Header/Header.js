@@ -4,10 +4,10 @@ import logo from '../../assets/swapi-logo.png'
 
 const Header = () => {
   return (
-    <div className="header">
+    <header className="header">
       <img src={logo} alt="swapi-box logo" />
-    </div>
+    </header>
   );
 };
 
-export default Header;
+export default Header;5
