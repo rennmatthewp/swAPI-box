@@ -16,7 +16,6 @@ class App extends Component {
   
   componentDidMount() {
     this.getCrawl()
-
   }
 
   getCrawl() {
@@ -30,7 +29,7 @@ class App extends Component {
     return response.results.map( film => {
       return {  title: film.title,
                 filmNum: film.episode_id,
-                crawlText: film.opening_crawl,
+                body: film.opening_crawl,
                 date: film.created
             }
     })
@@ -40,7 +39,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <CardContainer />
+        <CardContainer crawlText={this.state.crawl} />
       </div>
     );
   }
