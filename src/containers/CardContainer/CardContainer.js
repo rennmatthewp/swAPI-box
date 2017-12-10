@@ -1,9 +1,10 @@
 import React from 'react';
+import Crawl from '../../components/Crawl/Crawl';
 
-const CardContainer = (crawlText) => {
+const CardContainer = ({ crawlText }) => {
   return (
     <div>
-      
+      <Crawl crawlText={crawlText} />
     </div>
   );
 };
