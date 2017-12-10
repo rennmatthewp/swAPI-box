@@ -4,7 +4,7 @@ import Crawl from '../../components/Crawl/Crawl';
 const CardContainer = ({ crawlText }) => {
   return (
     <div>
-      <Crawl crawlText={crawlText} />
+      <Crawl {...crawlText} />
     </div>
   );
 };

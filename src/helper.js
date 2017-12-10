@@ -16,8 +16,8 @@ export const getFilm = async () => {
 
 const formatFilmObject = ({ title, opening_crawl, release_date }) => {
   return {
-    title: title,
     crawl: opening_crawl,
+    title: title,
     year: releaseYear(release_date)
   };
 };
