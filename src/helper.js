@@ -6,8 +6,12 @@ const fetchAndParse = async url => {
 const filmNum = Math.ceil(Math.random() * 7);
 
 export const getFilm = async () => {
-  const film = await fetchAndParse(`https://swapi.co/api/films/${filmNum}`);
-  return formatFilmObject(film);
+  try {
+    const film = await fetchAndParse(`https://swapi.co/api/films/${filmNum}`);
+    return formatFilmObject(film);
+  } catch (error) {
+    return console.log('error:', error)
+  }
 };
 
 const formatFilmObject = ({ title, opening_crawl, release_date }) => {
