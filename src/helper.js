@@ -16,7 +16,7 @@ export const getFilm = async () => {
 
 const formatFilmObject = ({ title, opening_crawl, release_date }) => {
   return {
-    crawl: opening_crawl,
+    crawl: formatCrawlText(opening_crawl),
     title: title,
     year: releaseYear(release_date)
   };
@@ -25,3 +25,9 @@ const formatFilmObject = ({ title, opening_crawl, release_date }) => {
 const releaseYear = fullDate => {
   return fullDate.split('-')[0];
 };
+
+const formatCrawlText = (rawCrawlText) => {
+  const regEx = new RegExp(/\s{3,}/, 'g');
+  let crawl = rawCrawlText.replace(regEx, '###');
+  return crawl = crawl.split('###');
+}
