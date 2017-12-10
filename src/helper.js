@@ -1,5 +1,11 @@
-const helper = () => {
-  const num = Math.floor(Math.random * 7) 
-}
+const fetchAndParse = async url => {
+  const initialFetch = await fetch(url);
+  return initialFetch.json();
+};
 
-export default helper;
+const filmNum = Math.ceil(Math.random() * 7)
+
+export const getFilm = async () => {
+  const film = await fetchAndParse(`https://swapi.co/api/films/${filmNum}`);
+  return film;
+};
