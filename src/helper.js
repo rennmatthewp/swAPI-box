@@ -14,10 +14,10 @@ const formatFilmObject = ({ title, opening_crawl, release_date }) => {
   return {
     title: title,
     crawl: opening_crawl,
-    date: formatReleaseDate(release_date)
+    year: releaseYear(release_date)
   };
 };
 
-const formatReleaseDate = fullDate => {
+const releaseYear = fullDate => {
   return fullDate.split('-')[0];
 };
