@@ -3,9 +3,21 @@ const fetchAndParse = async url => {
   return initialFetch.json();
 };
 
-const filmNum = Math.ceil(Math.random() * 7)
+const filmNum = Math.ceil(Math.random() * 7);
 
 export const getFilm = async () => {
   const film = await fetchAndParse(`https://swapi.co/api/films/${filmNum}`);
-  return film;
+  return formatFilmObject(film);
+};
+
+const formatFilmObject = ({ title, opening_crawl, release_date }) => {
+  return {
+    title: title,
+    crawl: opening_crawl,
+    date: formatReleaseDate(release_date)
+  };
+};
+
+const formatReleaseDate = fullDate => {
+  return fullDate.split('-')[0];
 };
