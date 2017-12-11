@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../../containers/Header/Header';
 import CardContainer from '../../containers/CardContainer/CardContainer';
+import './App.css';
 
 import { getFilm } from "../../helper";
 
@@ -16,10 +17,10 @@ class App extends Component {
     };
   }
   
-  async componentDidMount() {
-    const film = await getFilm();
-    this.setState({ film })
-  }
+  // async componentDidMount() {
+  //   const film = await getFilm();
+  //   this.setState({ film })
+  // }
 
   render() {
     return (

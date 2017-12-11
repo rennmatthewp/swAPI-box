@@ -10,7 +10,7 @@ export const getFilm = async () => {
     const film = await fetchAndParse(`https://swapi.co/api/films/${filmNum}`);
     return formatFilmObject(film);
   } catch (error) {
-    return console.log('error:', error)
+    return ('error:', error);
   }
 };
 
@@ -26,8 +26,8 @@ const releaseYear = fullDate => {
   return fullDate.split('-')[0];
 };
 
-const formatCrawlText = (rawCrawlText) => {
+const formatCrawlText = rawCrawlText => {
   const regEx = new RegExp(/\s{3,}/, 'g');
   let crawl = rawCrawlText.replace(regEx, '###');
-  return crawl = crawl.split('###');
-}
+  return (crawl = crawl.split('###'));
+};
