@@ -1,0 +1,63 @@
+.crawl h3, .crawl h4, .crawl p {
+  color: #ffd600;
+  font-weight: 900;
+  opacity: .8;
+}
+
+.crawl h3 {
+  font-size: 100px;
+  margin: 20px 0;
+  text-align: center
+}
+
+.crawl h4 {
+  font-size: 60px;
+  text-align: center;
+}
+
+.crawl p {
+  font-size: 55px;
+  line-height: 1.4;
+  margin-top: 0;
+}
+
+.crawl {
+  bottom: 0;
+  font-size: 350%;
+  font-weight: bold;
+  height: 40em;
+  left: 50%;
+  margin-left: -9em;
+  overflow: hidden;
+  position: absolute;
+  text-align: justify;
+  transform: perspective(300px) rotateX(25deg);
+  transform-origin: 50% 100%;
+  width: 18em;
+}
+
+.crawl:after {
+  background-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  bottom: 60%;
+  content: ' ';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.crawl-content {
+  animation: scroll 150s linear 4s infinite;
+  position: absolute;
+  top: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    top: 100%; 
+  }
+  100% {
+    top: -170%;
+  }
+}
